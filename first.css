@@ -1,0 +1,661 @@
+* {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box; /*设置相邻框*/
+}
+
+body {
+  color: #fff; /*白字*/
+  background-color: #000000; /*黑底*/
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  font-size: .3rem;
+  height: 100vh;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.bd-1 {
+  height: 100%;
+  background: #f2f2f2;
+}
+
+.bd-2 {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.bd-3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.top {
+  height: 5vh;
+  line-height: .7rem; /*行间距*/
+  background-color: #30303b;
+  position: relative;
+  text-align: center;
+  font-size: .28rem;
+}
+
+.top .top-center {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #000000;
+  padding: 0.05rem;
+  font-size: .28rem;
+  border-radius: 1rem;
+  height: .52rem;
+  line-height: .52rem;
+  vertical-align: middle;
+}
+
+.top .top-center .top-center-active {
+  background-color: #464556;
+}
+
+.top .top-center span {
+  display: inline-block;
+  border-radius: 1rem;
+  height: .44rem;
+  line-height: .44rem;
+  padding: .05rem .2rem;
+}
+
+.top .top-left {
+  font-size: .26rem;
+  position: absolute;
+  top: 0;
+  left: .3rem;
+}
+
+.top .top-left .top-left-logo {
+  margin-top: .14rem;
+  margin-right: .18rem;
+  width: 1.83rem;
+  height: .42rem;
+  background-position: -1.61rem -.04rem;
+  vertical-align: top;
+
+  display: inline-block;
+  /* vertical-align: middle; */
+  background-repeat: no-repeat;
+  background-image: url(https://ms0.meituan.net/piaofang/img/pc-sprite-3d92a0c1.png);
+  background-size: 3.48rem .5rem;
+}
+
+.middle {
+  /*height: 8.5rem;*/
+  -webkit-box-flex: 1; /*平分父元素*/
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.middle .bg {
+  border-radius: .08rem;
+  background-color: #373743;
+}
+
+.middle .middle-left {
+  height: 92vh;
+  position: relative;
+  top: .4rem;
+  bottom: .4rem;
+  left: .5rem;
+  width: 5.4rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+/*中间左侧上部的没有优先展示的样式*/
+.middle .middle-left .middle-left-up {
+  -webkit-box-flex: 620;
+  flex: 620;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.middle .middle-left .middle-left-up .middle-lu-hint {
+  font-size: .48rem;
+  margin-top: 2.77rem;
+}
+
+.middle .star {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("https://ms0.meituan.net/piaofang/img/pc-sprite-3d92a0c1.png");
+  background-size: 3.48rem .5rem;
+}
+
+.middle .star-big {
+  width: .41rem;
+  height: .39rem;
+  background-position: -1.12rem -.04rem;
+}
+
+.middle .middle-left .middle-left-break {
+  height: .2rem;
+}
+
+/*中间左侧下面的今日实时*/
+.middle .middle-left .middle-left-down {
+  -webkit-box-flex: 288;
+  flex: 288;
+  display: flex;
+}
+
+.middle .middle-left .middle-left-down .middle-left-down-cal {
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+.middle .middle-left .middle-left-down .middle-left-down-cal .cal-update-time {
+  opacity: .8;
+  font-size: .22rem;
+  margin-top: .1rem;
+}
+
+.cal-box {
+  margin-top: .25rem;
+  font-size: .42rem;
+}
+
+.middle-left-down-cal .cal-box .cal-box-num {
+  margin-left: .1rem;
+  color: #ff6a00;
+}
+
+.middle .middle-left .cal-current {
+  display: inline-block;
+  cursor: pointer;
+  border: .02rem solid #666;
+  border-radius: 1rem;
+  height: .54rem;
+  line-height: .54rem;
+  padding: 0 .28rem;
+  font-size: .3rem;
+}
+
+.cal-current .traingle {
+  width: 0;
+  height: 0;
+  border-top: .1rem solid #999;
+  border-bottom: .1rem solid transparent;
+  border-left: .06rem solid transparent;
+  border-right: .06rem solid transparent;
+  display: inline-block;
+  vertical-align: top;
+  margin: .24rem 0 0 .08rem;
+}
+
+/*中间右侧的表格样式*/
+.middle .middle-list {
+  height:92vh;
+  position: absolute;
+  top: .4rem;
+  bottom: .4rem;
+  left: 6.1rem;
+  right: .5rem;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.middle .middle-list .list-title {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  height: 1.15rem;
+}
+
+.middle .middle-list .list-title th {
+  color: #999;
+  font-weight: normal;
+  font-size: .24rem;
+  height: 1.11rem;
+  line-height: 1.11rem;
+}
+
+.middle .middle-list .list-title .title-1 {
+  color: #ffffff;
+  text-align: left;
+  width: 4rem;
+  box-sizing: border-box;
+  padding-left: .45rem;
+}
+
+.middle .star-mini {
+  width: .14rem;
+  height: .13rem;
+  background-position: -.04rem -.04rem;
+}
+
+.middle .middle-list .list-title .title-1 .mini {
+  font-size: .14rem;
+}
+
+.middle .middle-list .list-title .theader {
+  line-height: 1.2;
+}
+
+.middle .middle-list .list-table {
+  -webkit-box-flex: 1;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.middle .middle-list .list-table .movelist-bd {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.middle .middle-list .list-table .movelist-bd .selected-movie {
+  background-color: #535265;
+}
+
+.middle .middle-list .list-table .movelist-bd .moviename-td {
+  overflow: hidden;
+  line-height: 1.4;
+  text-align: left;
+  width: 4rem;
+  box-sizing: border-box;
+  padding-left: .38rem;
+}
+
+.movelist-bd .moviename-td .moviename-num {
+  font-size: .26rem;
+  width: .32rem;
+  float: left;
+}
+
+.movelist-bd .moviename-td .moviename-index {
+  opacity: .7; /*透明度*/
+  height: .45rem;
+  line-height: .45rem;
+}
+
+.movelist-bd .moviename-td .moviename-star {
+  margin-top: -.03rem;
+}
+
+.middle .star-gray {
+  cursor: pointer;
+  width: .22rem;
+  height: .21rem;
+  background-position: -.52rem -.04rem;
+  vertical-align: top;
+}
+
+.movelist-bd .moviename-td .moviename-desc {
+  margin-left: .42rem;
+}
+
+.movelist-bd .moviename-td .moviename-desc .moviename-name {
+  font-size: .32rem;
+}
+
+.movelist-bd .moviename-td .moviename-desc .moviename-info {
+  opacity: .7;
+  font-size: .2rem;
+}
+
+.middle .middle-star {
+  cursor: pointer;
+  width: .22rem;
+  height: .21rem;
+  background-position: -.82rem -.04rem;
+  vertical-align: top;
+}
+
+.list-table .movelist-bd tbody tr:nth-child(odd) {
+  background-color: #3f3f4d;
+}
+
+.movelist-bd .realtime {
+  color: #ffac00;
+}
+
+.movelist-bd td {
+  font-size: .28rem;
+  text-align: center;
+  height: 1.37rem;
+  line-height: 1.37rem;
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+  width: 12px;
+  background: #484758;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #201f2a;
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track {
+  background: #484758;
+}
+
+/*左上栏被优先展示之后的样式*/
+.middle .middle-left .middle-left-up .ml-detail-part-name {
+  padding-top: .58rem;
+}
+
+.ml-detail-part-name .ml-detail-title {
+  font-size: .36rem;
+}
+
+.ml-detail-part-name .ml-detail-title .mlud-star {
+  margin: .12rem .1rem 0 0;
+  width: .22rem;
+  height: .21rem;
+  background-position: -.82rem -.04rem;
+  vertical-align: top;
+}
+
+.ml-detail-part-name .ml-detail-releaseinfo {
+  opacity: .5;
+  font-size: .28rem;
+}
+
+.middle .middle-left .middle-left-up .ml-detail-part-box {
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: flex;
+}
+
+.ml-detail-box {
+  margin: auto;
+}
+
+.ml-detail-box .ml-detail-real-desc {
+  opacity: .6;
+  font-size: .3rem;
+}
+
+.ml-detail-box .ml-detail-real {
+  color: #ff6a00;
+  font-size: .6rem;
+}
+
+.ml-detail-box .ml-detail-real-ratio {
+  margin-top: -.1rem;
+  opacity: .8;
+  font-size: .28rem;
+}
+
+.middle .middle-left .middle-left-up .ml-detail-part-extra {
+  display: flex;
+  padding-bottom: .55rem;
+}
+
+.ml-detail-part-extra .ml-detail-item {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+
+.ml-detail-part-extra .ml-detail-item .ml-detail-item-title {
+  opacity: .6;
+  font-size: .28rem;
+}
+
+.ml-detail-part-extra .ml-detail-item .ml-deyail-item-num {
+  font-size: .4rem;
+}
+
+.ml-detail-part-extra .ml-detail-item .ml-detail-item-ratio {
+  margin-top: -.08rem;
+  opacity: .8;
+  font-size: .22rem;
+}
+
+.bd-cal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.bd-cal .calendar-pc {
+  background: #000;
+}
+
+.bd-cal .calendar-pc .cal-title {
+  height: .7rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  background: #454354;
+  color: #fff;
+  font-size: .3rem;
+}
+
+.center {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.cal-title .cal-title-left {
+  margin-left: .74rem;
+}
+
+.cal-title .cal-title-right {
+  cursor: pointer;
+  margin-right: .48rem;
+}
+
+.cal-title .cal-title-left .cal-icon {
+  width: .26rem;
+  height: .23rem;
+  background-image: url("https://ms0.meituan.net/piaofang/img/calendar/calendar-58bc293c.png");
+  background-size: 100%;
+}
+
+.cal-title .cal-title-left .cal-text {
+  margin-left: .12rem;
+}
+
+.cal-title .cal-title-right .back-icon {
+  margin-left: .06rem;
+  width: .18rem;
+  height: .14rem;
+  background-image: url("https://ms0.meituan.net/piaofang/img/calendar/back-2415ca8f.png");
+  background-size: 100%;
+}
+
+.bd-cal .calendar-pc .cal-content {
+  padding: 0 1rem;
+}
+
+.cal-content .cal-content-header {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: .41rem;
+}
+
+.cal-content .cal-content-header .cch-years {
+  position: relative;
+  z-index: 10;
+  margin-left: -.05rem;
+}
+
+.cal-content-header .cch-years .cch-years-current {
+  width: 2rem;
+  height: .7rem;
+  background: #6c6e82;
+  border-radius: .06rem;
+  color: #fff;
+  font-size: .34rem;
+}
+
+.cal-content-header .cch-years .cch-years-current .cch-years-caret {
+  margin-left: .06rem;
+  width: .1rem;
+  height: .07rem;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
+  background-image: url("https://ms0.meituan.net/piaofang/img/calendar/caret-c1b9b692.png");
+  background-size: 100%;
+}
+/*这个是转的动画*/
+.cal-content-header .cch-years .cch-years-current .cch-years-caret.up {
+  transform: rotate(180deg);
+}
+
+.cal-content .cal-content-header .cch-months {
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: .6rem;
+  display: flex;
+  margin-left: .54rem;
+  border: .02rem solid #4d4d4d;
+  border-radius: .06rem;
+  font-size: .24rem;
+  color: rgba(255, 255, 255, .6);
+}
+
+.cal-content .cal-content-header .cch-months .cch-month:first-child {
+  border-left: 0;
+}
+
+.cal-content .cal-content-header .cch-months .cch-month {
+  -webkit-box-flex: 1;
+  flex: 1;
+  border-left: .02rem solid #4d4d4d;
+}
+
+.cal-content .cal-content-header .cch-months .select {
+  background: #6c6e82;
+  border-radius: .06rem;
+  transform: scale(1.17);
+  border-color: transparent;
+  color: #fff;
+}
+
+.cal-content .cal-content-body {
+  margin-top: .35rem;
+  border-radius: .06rem;
+  background: rgba(69, 67, 84, .8);
+}
+
+.calendar-pc .cal-content .cal-content-body .cla-cb-weeks {
+  display: flex;
+  height: .87rem;
+  border-radius: .06rem;
+  font-size: .24rem;
+  color: #fff;
+  opacity: .7;
+}
+
+.calendar-pc .cal-content .cla-cb-weeks .cla-cb-week {
+  flex: 1;
+  -webkit-box-flex: 1;
+}
+
+.cal-content .cal-content-body .cla-cb-dates {
+  display: flex;
+  flex-wrap: wrap; /*灵活的项目在必要的时候拆行或拆列*/
+}
+
+.cal-content .cal-content-body .cla-cb-dates .cla-cb-date {
+  position: relative;
+  width: 14%;
+  height: 1.35rem;
+  border-left: .01rem solid rgba(255, 255, 255, .2);
+  border-top: .01rem solid rgba(255, 255, 255, .2);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.cal-content .cal-content-body .cla-cb-dates :nth-child(7n+1) {
+  border-left-color: #000;
+}
+
+.cal-content .cal-content-body .cla-cb-dates .disable .cla-num {
+  opacity: .3;
+}
+
+.cal-content .cal-content-body .cla-cb-dates .cla-cb-date .cla-num {
+  position: absolute;
+  color: #fff;
+  top: .17rem;
+  right: .31rem;
+  height: .5rem;
+  line-height: .5rem;
+  font-size: .36rem;
+}
+
+.cal-content .cal-content-body .cla-cb-dates .cla-cb-date .cla-fastival {
+  position: absolute;
+  top: .64rem;
+  right: .21rem;
+  font-size: .3rem;
+  color: #ffac00;
+}
+
+.cal-content .cal-content-body .cla-cb-dates .select .cla-fastival {
+  color: #fff;
+}
+
+.cal-content .cal-content-body .cla-cb-dates .select {
+  background: #ffac00;
+}
+
+.cal-content .cal-content-body .cla-cb-dates .cla-cb-date-hover:hover {
+  background: rgba(255, 255, 255, .2);
+}
+
+.cal-content .cal-content-header .cch-years .cch-years-dropdown {
+  position: absolute;
+  left: .05rem;
+  width: 1.9rem;
+  background: #515260;
+  border-radius: .06rem;
+}
+
+.cal-content .cal-content-header .cch-years .cch-years-dropdown .y-menu {
+  height: .7rem;
+  border-top: solid .01rem #62657f;
+  color: #fff;
+  font-size: .3rem;
+}
+
+.cal-content .cal-content-header .cch-years .cch-years-dropdown .y-menu.select {
+  color: #ffac00;
+}
