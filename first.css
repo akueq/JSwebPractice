@@ -44,7 +44,7 @@ p {
 }
 
 .top {
-  height: 5vh;
+  height: .7rem;
   line-height: .7rem; /*行间距*/
   background-color: #30303b;
   position: relative;
@@ -112,9 +112,9 @@ p {
 }
 
 .middle .middle-left {
-  height: 92vh;
-  position: relative;
-  top: .4rem;
+  height: 88vh;
+  position: absolute;
+  top: 3vh;
   bottom: .4rem;
   left: .5rem;
   width: 5.4rem;
@@ -212,9 +212,9 @@ p {
 
 /*中间右侧的表格样式*/
 .middle .middle-list {
-  height:92vh;
+  height:88vh;
   position: absolute;
-  top: .4rem;
+  top: 3vh;
   bottom: .4rem;
   left: 6.1rem;
   right: .5rem;
