@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="../css/first.css">
+</head>
+<body style="overflow: auto;">
+<div class="bd-1">
+  <div class="bd-2">
+    <div class="bd-3" id="table">
+      <div class="top">
+        <span class="top-center" onclick="topCenterActive()">
+          <span class="top-center-active">综合票房</span>
+          <span>分账票房</span>
+        </span>
+        <div class="top-left">
+          <span class="top-left-logo"></span>
+          <span class="top-left-time">
+            <span id="day"></span>
+            <span id="time"></span>
+          </span>
+        </div>
+        <div class="top-right"></div>
+      </div>
+      <div class="middle">
+        <div class="middle-left">
+          <div class="middle-left-up bg">
+            <div class="middle-lu-hint">
+            </div>
+          </div>
+          <div class="middle-left-break"></div>
+          <div class="middle-left-down bg">
+            <div class="middle-left-down-cal">
+              <div class="cal-current">
+
+              </div>
+              <div class="cal-box">
+                <!--今日实时-->
+                <span>今日实时</span>
+                <span class="cal-box-num"></span>
+              </div>
+              <p class="cal-update-time">
+                <span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="middle-list bg">
+          <table class="list-title">
+            <thead>
+            <tr>
+              <th class="title-1">
+                <span>影片</span>
+                <span class="mini">
+                    （点击
+                    <span class="star star-mini"></span>
+                    优先展示）
+                  </span>
+              </th>
+              <th>
+                <div class="theader">综合票房(万)</div>
+              </th>
+              <th>
+                <div class="theader">票房占比</div>
+              </th>
+              <th>
+                <div class="theader">排片场次</div>
+              </th>
+              <th>
+                <div class="theader">排片占比</div>
+              </th>
+              <th>
+                <div class="theader">场均人次</div>
+              </th>
+              <th>
+                <div class="theader">上座率</div>
+              </th>
+            </tr>
+            </thead>
+          </table>
+          <div class="list-table">
+            <div class="movielist">
+              <table class="movelist-bd">
+                <tbody>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bd-cal" id="cal" style="display: none">
+      <div class="calendar-pc">
+        <div class="cal-title">
+          <div class="cal-title-left center">
+            <span class="cal-icon"></span>
+            <span class="cal-text">
+              <!--这里是当前日期20180817这种-->
+              当前日期：
+            </span>
+          </div>
+          <div class="cal-title-right center">
+            <span class="cal-back">返回</span>
+            <span class="back-icon"></span>
+          </div>
+        </div>
+        <div class="cal-content">
+          <div class="cal-content-header">
+            <div class="cch-years">
+              <div class="cch-years-current center">
+                <span>2018</span>
+                <span class="cch-years-caret"></span>
+              </div>
+              <div class="cch-years-dropdown" style="display: none">
+                <div class="y-menu center">2011</div>
+                <div class="y-menu center">2012</div>
+                <div class="y-menu center">2013</div>
+                <div class="y-menu center">2014</div>
+                <div class="y-menu center">2015</div>
+                <div class="y-menu center">2016</div>
+                <div class="y-menu center">2017</div>
+                <div class="y-menu center select">2018</div>
+              </div>
+              <!--下拉框在这里添加-->
+            </div>
+            <div class="cch-months">
+              <div class="cch-month center" id="01">一月</div>
+              <div class="cch-month center" id="02">二月</div>
+              <div class="cch-month center" id="03">三月</div>
+              <div class="cch-month center" id="04">四月</div>
+              <div class="cch-month center" id="05">五月</div>
+              <div class="cch-month center" id="06">六月</div>
+              <div class="cch-month center" id="07">七月</div>
+              <div class="cch-month center select" id="08">八月</div>
+              <div class="cch-month center" id="09">九月</div>
+              <div class="cch-month center" id="10">十月</div>
+              <div class="cch-month center" id="11">十一月</div>
+              <div class="cch-month center" id="12">十二月</div>
+            </div>
+          </div>
+          <div class="cal-content-body">
+            <div class="cla-cb-weeks">
+              <div class="cla-cb-week center">星期一</div>
+              <div class="cla-cb-week center">星期二</div>
+              <div class="cla-cb-week center">星期三</div>
+              <div class="cla-cb-week center">星期四</div>
+              <div class="cla-cb-week center">星期五</div>
+              <div class="cla-cb-week center">星期六</div>
+              <div class="cla-cb-week center">星期日</div>
+            </div>
+            <div class="cla-cb-dates">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/two.js" type="text/javascript"></script>
+<script src="../js/one.js" type="text/javascript"></script>
+<script src="../js/three.js" type="text/javascript"></script>
+<script src="../js/four.js" type="text/javascript"></script>
+<script src="../js/five.js" type="text/javascript"></script>
+
+
+</body>
+</html>
